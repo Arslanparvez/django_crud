@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"/>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+           
+          </div>
+        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 shadow p-4 mx-auto" style="margin-top:80px;">
+                    <h2>CREATE BLOGS</h2>
+                    {% if errmsg  %}
+                      <div class="alert alert-danger">
+                        {{errmsg}}
+                      </div>
+                    {% endif %}
+                    <form method="POST" action="" enctype="multipart/form-data">
+                      {% csrf_token %}
+                        
+                          <br>
+                          <div class="mb-3">
+                            <label for="input2" class="form-label">Description</label>
+                            <input type="text" class="form-control" id="input2" name="upass" placeholder="Enter message">
+                            <input type="file" name="myfile" class="form-control">
+                          </div>
+                          <div align="center">
+                          <input  type="submit" class="btn btn-success" value="Create Post">
+                          </div>
+                         
+                    </form>
+            </div>
+            
+        </div>
+        </div>
+    </div>
+</body>
+</html>
+</body>
+</html>
